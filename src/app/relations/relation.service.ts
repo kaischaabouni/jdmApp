@@ -4,13 +4,14 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class RelationService {
- private _getUrl = "/api";
+ private _getUrl = "/api/";
 
   constructor(private _http: Http) { }
 
-  getRelations(){
-  return this._http.get(this._getUrl)
-  .map((response: Response)=> response.json());
+  getRelations(terme){
+    //return this._http.get(this._getUrl)
+    return this._http.get(this._getUrl + terme)
+    .map((response: Response)=> response.json());
   }
 
 }

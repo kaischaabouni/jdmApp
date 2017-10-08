@@ -15,9 +15,16 @@ export class RelationsComponent implements OnInit {
   constructor(private _relationService: RelationService) { }
 
   ngOnInit() {
+  /*
   this._relationService.getRelations()
   .subscribe(resRelationData => this.relations = resRelationData);
-
+  */
   }
 
+  rechercherTerme($event, termeRecherche){
+    if($event.which === 1){
+      this._relationService.getRelations(termeRecherche.value)
+      .subscribe(resRelationData => this.relations = resRelationData);
+    };
+  }
 }

@@ -1,94 +1,32 @@
 var express= require('express');
 var router = express.Router();
-var mongojs = require('mongojs');
-var db= mongojs('mongodb://kais:testtest@ds159274.mlab.com:59274/todos',['todos'])
+//var mongojs = require('mongojs');
+//var db= mongojs('mongodb://kais:testtest@ds159274.mlab.com:59274/todos',['todos'])
+var readline = require('readline');
+var fs = require('fs');
+var request = require("request");
 
-// find all
-router.get('/', function(req, res, next){
-  db.todos.find(function(err, todos){
-    if(err){
-      res.send(err);
-    }else{
-      res.json(todos);
-    }
-  });
-});
-
-
-// find one
-router.get('/:id', function(req, res, next){
-  db.todos.findOne({
-    _id:mongojs.ObjectId(req.params.id)
-  },function(err, todo){
-    if(err){
-      res.send(err);
-    }else{
-      res.json(todo);
-    }
-  });
-});
-
-//save todos
-router.post('/', function(req, res, next){
-    var todo = req.body;
-    if(!todo.text || !(todo.isCompleted + '')){
-      res.status(404);
-      res.json({
-        "error":"invalid Data"
-      });
-    }else{
-      db.todos.save(todo, function(err, result){
-        if(err){
-          res.send(err);
+// chercher un mot
+router.get('/:terme', function(req, res, next){
+  var obj = [{"_id":req.params.terme,"text":req.params.terme,"isCompleted":false},{"_id":"59d28b71734d1d42e49ebc64","isCompleted":true,"text":"go to work"},{"_id":"59d28bba734d1d42e49ebc8a","text":"go food shopping","isCompleted":false},{"_id":"59d38b766cface1b98541960","text":"Machin","isCompleted":false}];
   
-        }else{
-          res.json(result);
-        }
-      });
-    }
-});
+  // Pb -> lire et ecrire en meme temps
+  fs.readFile('server/cache/dumps/' + req.params.terme + '.txt', 'utf8', function (err,data) {
+    if (err) {
+      // Fichier n'existe pas en cache
+      if(err.code === 'ENOENT'){
 
-//update todo
-router.put('/:id', function(req, res, next){
-    var todo = req.body;
-    var updObj = {};
-    if(todo.isCompleted){
-      updObj.isCompleted = todo.isCompleted
-    }
-    if(todo.text){
-      updObj.text = todo.text;
-    }
-  
-    if(!updObj){
-      res.status(404);
-      res.json({
-        "error":"invalid Data"
-      });
-    }else{
-      db.todos.update({
-      _id: mongojs.ObjectId(req.params.id)
-  
-    }, updObj,{},function(err, result){
-      if(err){
-        res.send(err);
-      }else{
-        res.json(result);
+      } else {
+        return console.log(err);        
       }
-    });
     }
-});
+    obj.push({"_id": "sfff" ,"text": data, "isCompleted":false}) ;
+    res.json(obj);
+  });
 
-//Delete todo
-router.delete('/:id', function(req, res, next){
-    db.todos.remove({
-      _id: mongojs.ObjectId(req.params.id)
-    },'',function(err, result){
-      if(err){
-        res.send(err);
-      }else{
-        res.json(result);
-      }
-    });
+  // -->Pb: lire et ecrire fichier en meme temps, -->auto close: pense à écrire fichier et créer json en mm temps
+  request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=").
+                  pipe(fs.createWriteStream("server/cache/dumps/" + req.params.terme + ".txt"));
 });
   
 module.exports = router;

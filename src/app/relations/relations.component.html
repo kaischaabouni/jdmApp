@@ -1,8 +1,8 @@
 <div class="add-relation-form text-center">
     <div class="form-group">
-        <input class="form-control input-lg col-md-10" placeholder="Taper un mot" autofocus #relationText>
+        <input class="form-control input-lg col-md-10" placeholder="Taper un mot" autofocus #termeRecherche>
         <br>
-        <button class="btn btn-primary ">Chercher</button>
+        <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-primary ">Chercher</button>
     </div>
 </div>
 

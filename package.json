@@ -25,6 +25,7 @@
     "core-js": "^2.4.1",
     "mongojs": "^2.4.1",
     "rxjs": "^5.4.2",
+    "sync": "^0.2.5",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

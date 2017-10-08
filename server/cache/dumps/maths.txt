@@ -1,0 +1,742 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head>
+    <title>Le Rézo sous forme DUMP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+
+<link rel="stylesheet" type="text/css" href="CSS/jdm.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/smoothbox.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/Roar.css"/>
+<link rel="stylesheet" type="text/css" href="jsscripts/humanejs/themes/libnotifybottom.css"/>
+<meta name="robots" content="nofollow, notranslate" />
+<meta name="googlebot" content="nofollow, notranslate" />
+
+<meta name="description" content="Jeu d'associations de termes, trés sympa et amusant. Mots à collectionner, capturer. Trouver les associations les plus pertinentes."/>
+<meta name="keywords" lang="fr" content="jeu, mots, mot, expression, collection, associations, fonctions lexicales, jeuxdemots, amusant, fonction lexicale, réseau, réseau lexical, TAL, TALN, langue, langage, lexique, dictionnaire"/>
+<META HTTP-EQUIV="Content-Language" content="fr"/>
+<meta name="reply-to" content="jeuxdemeaux@gmail.com"/>
+<meta name="category" content="Jeux"/>
+<meta name="distribution" content="global"/>
+<meta name="revisit-after" content="7 days"/><meta name="author" lang="fr" content="LIRMM, Mathieu Lafourcade"/>
+<meta name="copyright" content="LIRMM, Mathieu Lafourcade"/>
+<meta name="generator" content=""/>
+<meta name="identifier-url" content="http://www.lirmm.fr/jeuxdemots"/>
+<meta name="expires" content="never"/>
+<meta name="Date-Creation-yyyymmdd" content="mai 2006"/>
+<meta name="Date-Revision-yyyymmdd" content="septembre 2010"/>
+<meta name="google-site-verification" content="FJvgiMAOHMfdRtqEbU1H23AG_fLYRdz7fIioDc_oOxE" /><meta property="og:image" content="logo-jdm/logo1.jpg"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond noir.png"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond_blanc.png"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond_transp.png"/>
+<meta property="og:image" content="pics/logoJDMcarrevarianteFondNoir.png"/>
+<meta property="og:image" content="pics/logoJDMcarreFondBlanc.png"/>
+<meta property="og:image" content="pics/favicon-Je-32-bis.ico"/>
+
+<style>
+    @font-face {
+		font-family: "fontcandid";
+		src: url("fonts/TEMPSITC.TTF");
+	}
+</style>
+	
+<noscript>
+
+	<div style="position:absolute;z-index:10000;font-size:32pt;">
+
+	<CENTER>Javascript doit fonctionner ! Activez-le et rechargez cette page.
+
+	<br>
+
+	<IMG src="pics/error.png">
+
+	</CENTER>
+
+	<div>
+
+	<meta HTTP-EQUIV="Refresh" content="1;URL=http://jeuxdemots.org/"> 
+
+</noscript>
+
+
+<script type="text/javascript" src="jsscripts/mootools.js"></script>
+<script type="text/javascript" src="jsscripts/mootoolsmore.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_twik_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_duel_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_shake_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_beat_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_nbrel_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_playerstats_script.js"></script>
+<script type="text/javascript" src="jsscripts/shortcuts.js"></script>
+<script type="text/javascript" src="jsscripts/smoothbox.js"></script>
+<script type="text/javascript" src="jsscripts/overlay.js"></script>
+<script type="text/javascript" src="jsscripts/shake.js"></script>
+<script type="text/javascript" src="jsscripts/Roar.js"></script>
+<script type="text/javascript" src="jsscripts/humanejs/humane.js"></script>
+<link rel="shortcut icon" href="pics/favicon-Je-32-bis.ico" type="image/x-icon" />
+
+   	<link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+   	
+  </head>
+<body STYLE="overflow:auto;
+overflow-x:auto;
+overflow-y:visible;overflow-x:hidden;
+padding: 0px; margin: 0px; border: 0px;">
+
+<div class="jdm-level1-block">
+
+	<div class="jdm-prompt-block">
+    <div class="jdm-prompt">
+    Le Rézo format DUMP    </div>
+	</div>
+
+</div>
+
+<div class="jdm-level2-block">
+    <div id="rezoform" style="position:relative;top:-43px;left:100px;">
+    
+
+    Lien de cette page: <URL>?gotermsubmit=Chercher&gotermrel=maths&rel=</URL>
+    <br>
+    <br>
+
+     <form id="gotermrel" name="gotermrel" method="get" action="rezo-dump.php" >
+	    <input id="gotermsubmit" type="submit" name="gotermsubmit" value="Chercher">
+	    le terme
+	    <input id="gotermrel" type="text" name="gotermrel" value="maths" size=100>
+	    <br>Options :
+	Numéro de relation
+	<input id="rel" type="text" name="rel" value="" size=10></form>
+<br>
+<br>FROM CACHE : size=20543 - date=October 07 2017 18:28:58. - 101 secondes ago - 0.0011689814814815 days ago <br>
+
+<br>
+
+Code DUMP (cf source)<br>
+
+
+<CODE>
+// DUMP pour le terme 'maths' (eid=24362)
+
+<def>
+<br />
+(Familier) Mathématiques.<br /> 
+ Voilà qui étaient vraiment nos polytechniciens. Des polymagiciens de pacotille, forts en maths, certes, mais sans un sou de jugeote.    
+ (Crésus, Confessions d'un banquier pourri, chap.7, Fayard, 2009)  
+</def>
+
+
+
+// les types de noeuds (Nodes Types) : nt;ntid;'ntname'
+
+nt;1;'n_term'
+nt;4;'n_pos'
+nt;6;'n_flpot'
+nt;10;'n_relation'
+nt;18;'n_data'
+nt;36;'n_data_pot'
+nt;444;'n_link'
+nt;666;'n_AKI'
+nt;777;'n_wikipedia'
+
+// les noeuds/termes (Entries) : e;eid;'name';type;w;'formated name' 
+
+e;24362;'maths';1;346
+e;80973;'science';1;1906
+e;142229;'Science';1;126
+e;72731;'dur';1;1124
+e;221697;'ensemble>34363';1;14;'ensemble>simultanément'
+e;221698;'ensemble>61015';1;6;'ensemble>assemblage'
+e;221699;'ensemble>116178';1;54;'ensemble>collection'
+e;221700;'ensemble>120949';1;2;'ensemble>vêtement'
+e;221702;'ensemble>129632';1;50;'ensemble>habitat'
+e;239618;'ensemble>70527';1;26;'ensemble>musique'
+e;3876619;'dbnary:fra:__ws_1_maths__nom__1';444;0
+e;102345;'plaisir';1;3080
+e;214640;'calcul>69059';1;50;'calcul>estimation'
+e;214641;'calcul>102206';1;22;'calcul>médecine'
+e;214642;'calcul>141534';1;50;'calcul>combine'
+e;214643;'calcul>125391';1;16;'calcul>arithmétique'
+e;309645;'maths sup';777;50
+e;1759;'plus';1;272
+e;4507211;':r234150';10;0
+e;77487;'connaissances';1;98
+e;64834;'nombres';1;96
+e;140358;'recherche';1;1398
+e;152690;'Sciences';1;96
+e;72302;'sciences';1;520
+e;130492;'axiomes';1;50
+e;55162;'postulats';1;50
+e;59792;'énoncé';1;96
+e;207555;'scholie';1;50
+e;81691;'conjecture';1;66
+e;152187;'Technique';1;152
+e;13701;'technique';1;538
+e;126963;'grec';1;1133
+e;151578;'Italien';1;68
+e;103658;'italien';1;1242
+e;26055;'Aristote';1;96
+e;2152;'didactisme';1;50
+e;188321;'Nicolas Bourbaki';1;50
+e;272528;'Éléments de mathématique';777;50
+e;272529;'Éléments d'histoire des mathématiques';777;50
+e;60882;'apocopé';1;50
+e;95240;'Euclide';1;52
+e;177501;'Écriture';1;50
+e;54234;'écriture';1;1344
+e;137391;'Afrique';1;1624
+e;152253;'Commerce';1;218
+e;49615;'commerce';1;2784
+e;153253;'Astronomie';1;130
+e;264127;'entiers naturels';1;2
+e;130744;'Babylone';1;84
+e;61061;'Égypte';1;322
+e;15847;'axiomatique';1;52
+e;286581;'Éléments d'Euclide';777;50
+e;223160;'Al-Khawarizmi';1;50
+e;272541;'civilisation islamique';777;50
+e;112554;'analyse combinatoire';1;50
+e;272545;'mathesis universalis';777;50
+e;187415;'Isaac Newton';1;4
+e;62988;'Newton';1;72
+e;10975;'Leibniz';1;56
+e;32844;'David Hilbert';1;50
+e;23943;'Évariste Galois';1;76
+e;93911;'Galois';1;52
+e;58507;'anneaux';1;84
+e;116678;'Richard Dedekind';1;50
+e;95622;'Dedekind';1;50
+e;188378;'Georg Cantor';1;50
+e;55850;'Cantor';1;56
+e;75778;'Hilbert';1;50
+e;152211;'Informatique';1;170
+e;104993;'informatique';1;2820
+e;272569;'analyse complexe';777;52
+e;16209;'statistiques';1;102
+e;272571;'Charles Gustave Jacob Jacobi';777;50
+e;272574;'groupes finis';777;50
+e;50294;'bijection';1;56
+e;55184;'Grothendieck';1;50
+e;151679;'Physique';1;292
+e;43504;'physique';1;2192
+e;151907;'Biologie';1;306
+e;35143;'biologie';1;1772
+e;78552;'astrophysique';1;78
+e;91145;'axiomatisation';1;50
+e;191710;'espace vectoriel';1;52
+e;272592;'Dmitri Anosov';777;50
+e;416724;'Connaissance';1;50
+e;408911;'Logique';1;50
+e;403796;'logiques';1;50
+e;402302;'Nombre';1;50
+e;427692;'Latin';1;6
+e;102382;'latin';1;438
+e;426503;'Civilisation';1;50
+e;396292;'civilisations';1;50
+e;401279;'astronomiques';1;50
+e;143291;'Chine';1;1128
+e;400759;'chinoises';1;50
+e;72647;'Carl Friedrich Gauss';1;76
+e;60866;'cours';1;1220
+e;151587;'_FL:10';6;50
+e;278301;'maths spé';777;50
+e;6872;'math spé';1;68
+e;236829;'produit vectoriel';1;50
+e;236828;'produit scalaire';1;6
+e;151522;'_FL:9';6;50
+e;142376;'math';1;132
+e;251716;'_INFO-MONOSEMIC';36;50
+e;151553;'_FL:0';6;50
+e;152507;'Mathématiques';1;154
+e;3684792;'bn:03743805n';444;0
+e;254877;'_POL-NEUTRE_PC';36;50
+e;110311;'soustraction';1;432
+e;3684795;'bn:00053823n';444;0
+e;3576104;'Morpho:nospace';18;50
+e;276096;'_INFO-WIKI-YES';36;50
+e;236743;'vecteur axial';1;50
+e;3684793;'bn:14205794n';444;0
+e;256948;'discipline>79255';1;14;'discipline>enseignement'
+e;3575927;'Morpho:min';18;50
+e;23255;'mathématiques';1;1822
+e;3684796;'bn:02839700n';444;0
+e;70283;'travail';1;3974
+e;3090;'sciences mathématiques';1;50
+e;14330;'satisfaction';1;494
+e;236744;'pseudovecteur';1;50
+e;172435;'Langage:familier';18;50
+e;3228593;'wiki:@';444;0
+e;1912917;'_INFO-COUNTABLE-YES';36;0
+e;22650;'MATH';1;50
+e;241365;'objet mathématique';1;50
+e;5553455;'Images des maths';777;0
+e;146357;'envie';1;1328
+e;2586628;'Gender:Fem';4;0
+e;2586630;'Number:Plur';4;0
+e;91691;'surprise';1;1004
+e;139257;'discipline';1;286
+e;45403;'algèbre';1;284
+e;2585997;'_INFO-CNRTL-NO';36;50
+e;81843;'exercice';1;386
+e;37298;'amour';1;6590
+e;146893;'Nom:Fem+PL';4;50
+e;97324;'addition';1;704
+e;125695;'nombre';1;4458
+e;29208;'matière';1;1120
+e;171870;'Nom:';4;50
+e;28453;'bonheur';1;2058
+e;57221;'joie';1;3574
+e;254876;'_POL-POS_PC';36;50
+e;391097;'exercice de maths';1;50
+e;390570;'étudiant de maths';1;50
+e;347504;'diplômé de maths';1;50
+e;390540;'études de maths';1;50
+e;359641;'interro de maths';1;50
+e;361459;'licencié de maths';1;50
+e;241794;'_POL-NEUTRE';36;50
+e;317997;'livre de maths';1;50
+e;314181;'faire des maths';1;50
+e;261966;'formule de maths';1;50
+e;258329;'devoir de maths';1;50
+e;202897;'les maths';1;50
+e;155182;'cours de maths';1;62
+e;185578;'avoir la bosse des maths';1;50
+e;268926;'prof de maths';1;50
+e;223173;'_POL-POS';36;50
+e;2983124;'_SW';36;50
+e;239128;'_COM';36;50
+e;53576;'mathématique';1;576
+e;78636;'logarithme';1;50
+e;231488;'équation différentielle';1;50
+e;214639;'calcul>367508';1;26;'calcul>opération arithmétique'
+e;161051;'suite géométrique';1;54
+e;144138;'courbe';1;394
+e;129843;'probabilité';1;228
+e;141977;'chiffre';1;4180
+e;139459;'six';1;1574
+e;242010;'suite de Syracuse';1;50
+e;7761;'axiome';1;80
+e;244440;'courbe elliptique';1;50
+e;167617;'Alan Turing';1;76
+e;33574;'calculette';1;254
+e;258911;'devoir de mathématiques';1;50
+e;263147;'f(x)';1;34
+e;231705;'constante mathématique';1;16
+e;231192;'PGCD';1;50
+e;172520;'kurtosis';1;50
+e;242551;'Evariste Gallois';666;50
+e;314335;'plus grand commun diviseur';1;50
+e;314330;'PGDC';1;50
+e;391094;'plus grand diviseur commun';1;50
+e;74449;'Alan Mathison Turing';1;50
+e;229837;'-1';1;16
+e;260176;'fonction linéaire';1;2
+e;224397;'encadrement>23255';1;50;'encadrement>mathématiques'
+e;131727;'dérivation';1;70
+e;261180;'dérivation>23255';1;10;'dérivation>mathématiques'
+e;81148;'graphe';1;74
+e;65906;'cardinal';1;201
+e;244549;'faire ses devoirs';1;32
+e;107286;'infini';1;336
+e;287;'déductible';1;50
+e;23144;'Frénicle de Bessy';1;50
+e;91240;'école';1;7230
+e;47331;'calcul';1;1016
+e;67006;'mille';1;216
+e;136562;'factoriel';1;50
+e;78628;'aliquote';1;50
+e;172551;'ssi';1;50
+e;172518;'jordanisation';1;50
+e;22980;'factorisation';1;70
+e;172500;'entier relatif';1;50
+e;12225;'arithmologie';1;50
+e;204428;'nombre algébrique';1;50
+e;172473;'anguiné';1;50
+e;35127;'mathématiser';1;108
+e;221701;'ensemble>23255';1;50;'ensemble>mathématiques'
+e;25245;'aliquante';1;50
+e;161050;'suite arithmétique';1;54
+e;235770;'&#8734;';1;50
+e;5460;'mile';1;56
+e;37145;'1000';1;54
+e;631727;'supérieur>171870';1;0;'supérieur>Nom:'
+e;260173;'fonction croissante';1;24
+e;80698;'division';1;504
+e;11407;'bosse';1;268
+e;272564;'grand théorème de Fermat';777;50
+e;131886;'encadrement';1;120
+e;65064;'ensemble';1;756
+e;261197;'décroissante';1;50
+e;244721;'équation algébrique';1;50
+e;261842;'axe des abscisses';1;4
+e;260175;'étude de fonction';1;24
+e;8933876;'Maths sup';777;0
+
+// les types de relations (Relation Types) : rt;rtid;'trname';'trgpname';'rthelp' 
+
+rt;0;'r_associated';'idée associée';Il est demandé d'énumérer les termes les plus étroitement associés au mot cible... Ce mot vous fait penser à quoi ?
+rt;3;'r_domain';'domaine';Il est demandé de fournir des domaines relatifs au mot cible. Par exemple, pour 'corner', on pourra donner les domaines 'football' ou 'sport'.
+rt;4;'r_pos';'POS';Partie du discours (Nom, Verbe, Adjectif, Adverbe, etc.)
+rt;5;'r_syn';'synonyme';Il est demandé d'énumérer les synonymes ou quasi-synonymes de ce terme.
+rt;6;'r_isa';'générique';Il est demandé d'énumérer les GENERIQUES/hyperonymes du terme. Par exemple, 'animal' et 'mammifère' sont des génériques de 'chat'.
+rt;8;'r_hypo';'spécifique';Il est demandé d'énumérer des SPECIFIQUES/hyponymes du terme. Par exemple, 'mouche', 'abeille', 'guêpe' pour 'insecte'.
+rt;9;'r_has_part';'partie';Il faut donner des PARTIES/constituants/éléments (a pour méronymes) du mot cible. Par exemple, 'voiture' a comme parties : 'porte', 'roue', 'moteur', ...
+rt;10;'r_holo';'tout';Il est démandé d'énumérer des 'TOUT' (a pour holonymes)  de l'objet en question. Pour 'main', on aura 'bras', 'corps', 'personne', etc... Le tout est aussi l'ensemble comme 'classe' pour 'élève'.
+rt;11;'r_locution';'locution';A partir d'un terme, il est demandé d'énumérer les locutions, expression ou mots composés en rapport avec ce terme. Par exemple, pour 'moulin', ou pourra avoir 'moulin à vent', 'moulin à eau', 'moulin à café'. Pour 'vendre', on pourra avoir 'vendre la peau de l'ours avant de l'avoir tué', 'vendre à perte', etc..
+rt;12;'r_flpot';' 	r_flpot';(relation interne) potentiel de relation
+rt;17;'r_carac';'caractéristique';Pour un terme donné, souvent un objet, il est demandé d'en énumérer les CARACtéristiques (adjectifs) possibles/typiques. Par exemple, 'liquide', 'froide', 'chaude', pour 'eau'.
+rt;18;'r_data';'r_data';Informations diverses (plutôt d'ordre lexicales)
+rt;19;'r_lemma';'r_lemma';Le lemme (par exemple 'mangent a pour lemme  'manger' ; 'avions' a pour lemme 'avion' ou 'avoir').
+rt;22;'r_family';'famille';Des mots de la même famille lexicale sont demandés (dérivation morphologique, par exemple). Par exemple, pour 'lait' on pourrait mettre 'laitier', 'laitage', 'laiterie', etc.
+rt;27;'r_domain-1';'domaine-1';inverse de r_domain : à un domaine, on associe des termes
+rt;32;'r_sentiment';'sentiment';Pour un terme donné, évoquer des mots liés à des SENTIMENTS ou des EMOTIONS que vous pourriez associer à ce terme. Par exemple, la joie, le plaisir, le dégoût, la peur, la haine, l'amour, l'indifférence, l'envie, avoir peur, horrible, etc.
+rt;35;'r_meaning';'sens/signification';Quels SENS/SIGNIFICATIONS pouvez vous donner au terme proposé. Il s'agira de termes évoquant chacun des sens possibles, par exemple : 'forces de l'ordre', 'contrat d'assurance', 'police typographique', ... pour 'police'.
+rt;36;'r_infopot';'information potentielle';Information sémantique potentielle
+rt;71;'r_variante';'variante';Variantes du termes cible. Par exemple, yaourt, yahourt, ou encore évènement, événement.
+rt;115;'r_sentiment-1';'sentiment-1';Pour un SENTIMENT ou EMOTION donné, il est demandé d’énumérer les termes que vous pourriez associer. Par exemple, pour 'joie', on aurait 'cadeau', 'naissance', 'bonne nouvelle', etc.
+rt;444;'r_link';'r_link';Lien vers une ressource externe (WordNet, RadLex, UMLS, Wikipedia, etc...)
+rt;555;'r_cooccurrence';'r_cooccurrence';
+rt;666;'r_aki';'r_aki';(TOTAKI) equivalent pour TOTAKI de l'association libre
+rt;777;'r_wiki';'r_wiki';Associations issues de wikipedia...
+rt;999;'r_inhib';'r_inhib';relation d'inhibition, le terme inhibe les termes suivants... ce terme a tendance à exclure le terme associé.
+
+// les relations sortantes : r;rid;node1;node2;type;w 
+
+r;482777;24362;80973;6;-46
+r;482826;24362;80973;3;-32
+r;15674803;24362;142229;3;-20
+r;24901903;24362;72731;17;1
+r;33220717;24362;221697;999;1
+r;33220722;24362;221698;999;1
+r;33220725;24362;221699;999;1
+r;33220731;24362;221700;999;1
+r;33220741;24362;221702;999;1
+r;33220747;24362;239618;999;1
+r;94266075;24362;3876619;444;1
+r;78593961;24362;102345;32;3
+r;24455119;24362;214640;999;5
+r;24455129;24362;214641;999;5
+r;24455135;24362;214642;999;5
+r;24455139;24362;214643;999;5
+r;32090002;24362;309645;0;8
+r;10532367;24362;1759;9;9
+r;100175664;24362;4507211;0;9
+r;6755088;24362;77487;777;10
+r;6755089;24362;64834;777;10
+r;6755090;24362;140358;777;10
+r;6755091;24362;152690;777;10
+r;6755092;24362;72302;777;10
+r;6755093;24362;130492;777;10
+r;6755094;24362;55162;777;10
+r;6755095;24362;59792;777;10
+r;6755096;24362;207555;777;10
+r;6755097;24362;81691;777;10
+r;6755098;24362;142229;777;10
+r;6755099;24362;152187;777;10
+r;6755100;24362;13701;777;10
+r;6755101;24362;126963;777;10
+r;6755102;24362;151578;777;10
+r;6755103;24362;103658;777;10
+r;6755104;24362;26055;777;10
+r;6755105;24362;2152;777;10
+r;6755106;24362;188321;777;10
+r;6755107;24362;272528;777;10
+r;6755108;24362;272529;777;10
+r;6755109;24362;60882;777;10
+r;6755110;24362;95240;777;10
+r;6755111;24362;177501;777;10
+r;6755112;24362;54234;777;10
+r;6755113;24362;137391;777;10
+r;6755114;24362;152253;777;10
+r;6755115;24362;49615;777;10
+r;6755116;24362;153253;777;10
+r;6755117;24362;264127;777;10
+r;6755118;24362;130744;777;10
+r;6755119;24362;61061;777;10
+r;6755120;24362;15847;777;10
+r;6755121;24362;286581;777;10
+r;6755122;24362;223160;777;10
+r;6755123;24362;272541;777;10
+r;6755124;24362;112554;777;10
+r;6755125;24362;272545;777;10
+r;6755126;24362;187415;777;10
+r;6755127;24362;62988;777;10
+r;6755128;24362;10975;777;10
+r;6755129;24362;32844;777;10
+r;6755130;24362;23943;777;10
+r;6755131;24362;93911;777;10
+r;6755132;24362;58507;777;10
+r;6755133;24362;116678;777;10
+r;6755134;24362;95622;777;10
+r;6755135;24362;188378;777;10
+r;6755136;24362;55850;777;10
+r;6755137;24362;75778;777;10
+r;6755138;24362;152211;777;10
+r;6755139;24362;104993;777;10
+r;6755140;24362;272569;777;10
+r;6755141;24362;16209;777;10
+r;6755142;24362;272571;777;10
+r;6755143;24362;272574;777;10
+r;6755144;24362;50294;777;10
+r;6755145;24362;55184;777;10
+r;6755146;24362;151679;777;10
+r;6755147;24362;43504;777;10
+r;6755148;24362;151907;777;10
+r;6755149;24362;35143;777;10
+r;6755150;24362;78552;777;10
+r;6755151;24362;91145;777;10
+r;6755152;24362;191710;777;10
+r;6755153;24362;272592;777;10
+r;23644370;24362;416724;777;10
+r;23644371;24362;408911;777;10
+r;23644372;24362;403796;777;10
+r;23644373;24362;402302;777;10
+r;23644374;24362;427692;777;10
+r;23644375;24362;102382;777;10
+r;23644376;24362;426503;777;10
+r;23644377;24362;396292;777;10
+r;23644378;24362;401279;777;10
+r;23644379;24362;143291;777;10
+r;23644380;24362;400759;777;10
+r;23644381;24362;72647;777;10
+r;95728364;24362;60866;6;13
+r;234151;24362;151587;12;16
+r;31807308;24362;278301;0;17
+r;95728365;24362;6872;0;17
+r;15274500;24362;236829;0;21
+r;15274502;24362;236828;0;21
+r;30881284;24362;72302;3;21
+r;15140458;24362;236828;27;23
+r;234152;24362;151522;12;24
+r;87483343;24362;142376;0;26
+r;96033998;24362;251716;36;26
+r;100663;24362;151553;12;27
+r;14432613;24362;152507;0;27
+r;95728368;24362;3684792;444;27
+r;2432334;24362;254877;36;28
+r;9974394;24362;110311;9;28
+r;91647251;24362;3684795;444;28
+r;95728369;24362;6872;8;28
+r;90919683;24362;3576104;18;29
+r;85790493;24362;276096;36;30
+r;15140498;24362;236743;27;30
+r;95728367;24362;3684793;444;30
+r;3092496;24362;256948;0;31
+r;13660746;24362;142229;0;31
+r;15140456;24362;236829;27;32
+r;15274537;24362;236743;0;32
+r;90047720;24362;3575927;18;32
+r;95728401;24362;142376;71;32
+r;12197560;24362;23255;5;34
+r;13712451;24362;152507;5;34
+r;91647252;24362;3684796;444;34
+r;95728370;24362;70283;0;35
+r;100188358;24362;3090;0;35
+r;30891191;24362;72302;0;36
+r;33725833;24362;14330;32;36
+r;15140494;24362;236744;27;39
+r;60376169;24362;172435;18;40
+r;78097307;24362;3228593;444;40
+r;15274533;24362;236744;0;41
+r;30783471;24362;1912917;36;41
+r;95728366;24362;22650;0;41
+r;32078501;24362;309645;8;42
+r;109592769;24362;241365;0;42
+r;31778487;24362;278301;8;43
+r;109887256;24362;5553455;11;43
+r;28499180;24362;146357;32;44
+r;53987522;24362;2586628;4;45
+r;54003612;24362;2586630;4;45
+r;33725832;24362;91691;32;47
+r;1611782;24362;139257;0;51
+r;463377;24362;45403;0;52
+r;1611780;24362;60866;0;53
+r;315460;24362;142376;19;54
+r;55006991;24362;2585997;36;57
+r;264147;24362;81843;0;58
+r;28469029;24362;37298;32;58
+r;36411;24362;146893;4;59
+r;315461;24362;24362;19;59
+r;463375;24362;110311;0;60
+r;463376;24362;97324;0;60
+r;1579533;24362;125695;0;60
+r;1611781;24362;29208;0;60
+r;264148;24362;80973;0;64
+r;2272308;24362;171870;4;65
+r;261745;24362;23255;0;70
+r;28492098;24362;28453;32;70
+r;28467619;24362;57221;32;72
+r;9131527;24362;254876;36;75
+r;13639777;24362;142229;6;98
+r;13031103;24362;391097;11;102
+r;12539717;24362;390570;11;103
+r;12713337;24362;347504;11;106
+r;12539823;24362;390540;11;107
+r;12664237;24362;359641;11;107
+r;12656801;24362;361459;11;109
+r;2417479;24362;241794;36;125
+r;8945426;24362;317997;11;148
+r;8825914;24362;314181;11;157
+r;8728732;24362;261966;11;160
+r;8723880;24362;258329;11;161
+r;8672681;24362;202897;11;162
+r;8624348;24362;155182;11;163
+r;8644895;24362;185578;11;163
+r;8736745;24362;268926;11;163
+r;8745986;24362;278301;11;163
+r;8775522;24362;309645;11;163
+r;9128566;24362;223173;36;382
+r;74104305;24362;2983124;555;1630
+r;24025540;24362;239128;0;1000000
+
+// les relations entrantes : r;rid;node1;node2;type;w 
+
+r;121380;60866;24362;0;60
+r;234150;110311;24362;10;60
+r;380739;23255;24362;22;130
+r;1623490;53576;24362;22;60
+r;200608;152507;24362;22;140
+r;1804593;78636;24362;666;3
+r;1818791;231488;24362;0;70
+r;2000525;1759;24362;10;60
+r;1888340;236829;24362;0;35
+r;1624393;214639;24362;0;160
+r;2202109;161051;24362;0;35
+r;3160100;55184;24362;0;45
+r;8795388;144138;24362;0;5
+r;420748;129843;24362;0;60
+r;401060;23255;24362;35;80
+r;5007692;141977;24362;0;10
+r;8556074;139459;24362;0;10
+r;8998669;242010;24362;0;51
+r;8783811;7761;24362;0;61
+r;9107434;244440;24362;0;51
+r;2192748;1759;24362;0;59
+r;3202606;167617;24362;0;32
+r;2478867;33574;24362;0;90
+r;9044014;258911;24362;0;51
+r;2561250;263147;24362;0;115
+r;2289822;231705;24362;0;130
+r;9603409;317997;24362;0;148
+r;8827986;314181;24362;0;148
+r;9594156;309645;24362;0;148
+r;9559475;278301;24362;0;147
+r;9549335;268926;24362;0;147
+r;9541000;261966;24362;0;147
+r;9535946;258329;24362;0;147
+r;9485851;202897;24362;0;147
+r;9456512;185578;24362;0;146
+r;9432395;155182;24362;0;145
+r;13028965;231192;24362;0;60
+r;1855974;172520;24362;0;60
+r;13199717;242551;24362;0;30
+r;13030669;314335;24362;0;60
+r;13030797;314330;24362;0;60
+r;13030986;391094;24362;0;60
+r;10702224;74449;24362;0;32
+r;13627015;142229;24362;8;35
+r;130328;23255;24362;0;81
+r;13625731;152507;24362;0;81
+r;8552434;110311;24362;0;15
+r;2342763;229837;24362;0;225
+r;23834745;260176;24362;0;51
+r;28471824;57221;24362;115;30
+r;28471835;37298;24362;115;30
+r;28495175;28453;24362;115;30
+r;28501486;102345;24362;115;30
+r;28501487;146357;24362;115;30
+r;1725629;23255;24362;5;31
+r;1888528;236743;24362;0;30
+r;1888596;236744;24362;0;35
+r;2037207;236743;24362;3;26
+r;2037234;236744;24362;3;29
+r;2038563;236828;24362;3;35
+r;2038570;236829;24362;3;27
+r;2147070;224397;24362;0;27
+r;2487624;131727;24362;0;32
+r;2487666;261180;24362;0;34
+r;3093394;81148;24362;0;31
+r;13926122;65906;24362;0;32
+r;24718529;244549;24362;0;29
+r;100662;107286;24362;0;58
+r;120843;287;24362;0;52
+r;152160;23144;24362;0;60
+r;315461;24362;24362;19;59
+r;368333;91240;24362;0;56
+r;419070;47331;24362;0;58
+r;1705531;67006;24362;0;56
+r;1845043;136562;24362;0;60
+r;1846655;78628;24362;0;56
+r;1922116;172551;24362;0;60
+r;1964423;172518;24362;0;57
+r;2024130;22980;24362;0;53
+r;2066148;172500;24362;0;56
+r;2066170;78636;24362;0;56
+r;2066244;12225;24362;0;54
+r;2119665;204428;24362;0;56
+r;2160553;172473;24362;0;59
+r;2256949;35127;24362;0;58
+r;2286744;221701;24362;0;52
+r;2574106;25245;24362;0;57
+r;2582090;161050;24362;0;54
+r;8557661;235770;24362;0;58
+r;10577255;80973;24362;0;56
+r;10728429;5460;24362;0;55
+r;13625796;152507;24362;5;31
+r;13626890;142229;24362;0;56
+r;13458460;37145;24362;0;55
+r;29508575;631727;24362;0;70
+r;9627416;80973;24362;8;-35
+r;34578446;91691;24362;115;3
+r;34578447;14330;24362;115;3
+r;1888348;236828;24362;0;36
+r;3126176;260173;24362;0;60
+r;3132408;80698;24362;0;32
+r;143894;11407;24362;0;54
+r;76517661;272564;24362;0;28
+r;95905764;142376;24362;0;26
+r;31776785;278301;24362;6;37
+r;97143074;131886;24362;0;15
+r;97139345;65064;24362;0;34
+r;12539718;390570;24362;0;102
+r;12539824;390540;24362;0;102
+r;12656802;361459;24362;0;109
+r;12713338;347504;24362;0;108
+r;13031104;391097;24362;0;108
+r;12664238;359641;24362;0;105
+r;15532549;142229;24362;27;22
+r;30891189;72302;24362;27;23
+r;30891190;72302;24362;0;23
+r;15189511;80973;24362;27;34
+r;98455015;261197;24362;0;111
+r;98808174;6872;24362;6;2
+r;2418083;244721;24362;0;55
+r;32078354;309645;24362;6;34
+r;100188356;3090;24362;0;29
+r;99829633;261842;24362;0;58
+r;109592766;241365;24362;0;29
+r;109887257;5553455;24362;0;14
+r;140248672;260175;24362;0;50
+r;193482012;8933876;24362;6;34
+r;193482014;8933876;24362;0;51
+r;95709602;142376;24362;71;34
+
+// END
+</CODE>
+
+
+</div>
+</div>
+</body>
+</html>

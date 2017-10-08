@@ -5,9 +5,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-{path : '',redirectTo:'/home', pathMatch:'full'},
-{path: 'home', component: HomeComponent},
-{path: 'relations',component: RelationsComponent}
+//{path : '',redirectTo:'/home', pathMatch:'full'},
+//{path: 'home', component: HomeComponent},
+{path: '',component: RelationsComponent}
 ];
 
 @NgModule({
