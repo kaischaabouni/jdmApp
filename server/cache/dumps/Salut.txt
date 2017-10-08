@@ -1,0 +1,827 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+ <head>
+    <title>Le Rézo sous forme DUMP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+
+<link rel="stylesheet" type="text/css" href="CSS/jdm.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/smoothbox.css"/>
+<link rel="stylesheet" type="text/css" href="CSS/Roar.css"/>
+<link rel="stylesheet" type="text/css" href="jsscripts/humanejs/themes/libnotifybottom.css"/>
+<meta name="robots" content="nofollow, notranslate" />
+<meta name="googlebot" content="nofollow, notranslate" />
+
+<meta name="description" content="Jeu d'associations de termes, trés sympa et amusant. Mots à collectionner, capturer. Trouver les associations les plus pertinentes."/>
+<meta name="keywords" lang="fr" content="jeu, mots, mot, expression, collection, associations, fonctions lexicales, jeuxdemots, amusant, fonction lexicale, réseau, réseau lexical, TAL, TALN, langue, langage, lexique, dictionnaire"/>
+<META HTTP-EQUIV="Content-Language" content="fr"/>
+<meta name="reply-to" content="jeuxdemeaux@gmail.com"/>
+<meta name="category" content="Jeux"/>
+<meta name="distribution" content="global"/>
+<meta name="revisit-after" content="7 days"/><meta name="author" lang="fr" content="LIRMM, Mathieu Lafourcade"/>
+<meta name="copyright" content="LIRMM, Mathieu Lafourcade"/>
+<meta name="generator" content=""/>
+<meta name="identifier-url" content="http://www.lirmm.fr/jeuxdemots"/>
+<meta name="expires" content="never"/>
+<meta name="Date-Creation-yyyymmdd" content="mai 2006"/>
+<meta name="Date-Revision-yyyymmdd" content="septembre 2010"/>
+<meta name="google-site-verification" content="FJvgiMAOHMfdRtqEbU1H23AG_fLYRdz7fIioDc_oOxE" /><meta property="og:image" content="logo-jdm/logo1.jpg"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond noir.png"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond_blanc.png"/>
+<meta property="og:image" content="logo-jdm/Logo_JDMrect_fond_transp.png"/>
+<meta property="og:image" content="pics/logoJDMcarrevarianteFondNoir.png"/>
+<meta property="og:image" content="pics/logoJDMcarreFondBlanc.png"/>
+<meta property="og:image" content="pics/favicon-Je-32-bis.ico"/>
+
+<style>
+    @font-face {
+		font-family: "fontcandid";
+		src: url("fonts/TEMPSITC.TTF");
+	}
+</style>
+	
+<noscript>
+
+	<div style="position:absolute;z-index:10000;font-size:32pt;">
+
+	<CENTER>Javascript doit fonctionner ! Activez-le et rechargez cette page.
+
+	<br>
+
+	<IMG src="pics/error.png">
+
+	</CENTER>
+
+	<div>
+
+	<meta HTTP-EQUIV="Refresh" content="1;URL=http://jeuxdemots.org/"> 
+
+</noscript>
+
+
+<script type="text/javascript" src="jsscripts/mootools.js"></script>
+<script type="text/javascript" src="jsscripts/mootoolsmore.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_twik_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_duel_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_shake_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_beat_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_nbrel_script.js"></script>
+<script type="text/javascript" src="jsscripts/jdm_playerstats_script.js"></script>
+<script type="text/javascript" src="jsscripts/shortcuts.js"></script>
+<script type="text/javascript" src="jsscripts/smoothbox.js"></script>
+<script type="text/javascript" src="jsscripts/overlay.js"></script>
+<script type="text/javascript" src="jsscripts/shake.js"></script>
+<script type="text/javascript" src="jsscripts/Roar.js"></script>
+<script type="text/javascript" src="jsscripts/humanejs/humane.js"></script>
+<link rel="shortcut icon" href="pics/favicon-Je-32-bis.ico" type="image/x-icon" />
+
+   	<link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+   	
+  </head>
+<body STYLE="overflow:auto;
+overflow-x:auto;
+overflow-y:visible;overflow-x:hidden;
+padding: 0px; margin: 0px; border: 0px;">
+
+<div class="jdm-level1-block">
+
+	<div class="jdm-prompt-block">
+    <div class="jdm-prompt">
+    Le Rézo format DUMP    </div>
+	</div>
+
+</div>
+
+<div class="jdm-level2-block">
+    <div id="rezoform" style="position:relative;top:-43px;left:100px;">
+    
+
+    Lien de cette page: <URL>?gotermsubmit=Chercher&gotermrel=Salut&rel=</URL>
+    <br>
+    <br>
+
+     <form id="gotermrel" name="gotermrel" method="get" action="rezo-dump.php" >
+	    <input id="gotermsubmit" type="submit" name="gotermsubmit" value="Chercher">
+	    le terme
+	    <input id="gotermrel" type="text" name="gotermrel" value="Salut" size=100>
+	    <br>Options :
+	Numéro de relation
+	<input id="rel" type="text" name="rel" value="" size=10></form>
+<br>
+
+<br>//&nbsp; &nbsp; &nbsp; nb relations sortantes=84
+<br>//&nbsp; &nbsp; &nbsp; production de '84' relations sortantes au bout de 0.0028648376464844 s.
+<br>//&nbsp; &nbsp; &nbsp; nb relations entrantes=247
+<br>//&nbsp; &nbsp; &nbsp; production de '247' relations entrantes au bout de 0.047680854797363 s.
+<br>//&nbsp; &nbsp; &nbsp; nb noeuds=309
+<br>//&nbsp; &nbsp; &nbsp; production de '309' nodes au bout de 0.20150589942932 s.
+<br>//&nbsp; &nbsp; &nbsp; nb reltype=10
+<br>//&nbsp; &nbsp; &nbsp; production de '309' type de relations au bout de 0.20556879043579 s.
+<br>//&nbsp; &nbsp; &nbsp; nb nodetype=7
+<br>//&nbsp; &nbsp; &nbsp; production de '309' type de relations au bout de 0.22031283378601 s.<br>set_cache_dump(29671, ... <br>TOWARD CACHE<br>
+
+<br>
+
+Code DUMP (cf source)<br>
+
+
+<CODE>
+// DUMP pour le terme 'Salut' (eid=29671)
+
+<def>
+
+</def>
+
+
+
+// les types de noeuds (Nodes Types) : nt;ntid;'ntname'
+
+nt;1;'n_term'
+nt;4;'n_pos'
+nt;6;'n_flpot'
+nt;18;'n_data'
+nt;36;'n_data_pot'
+nt;444;'n_link'
+nt;777;'n_wikipedia'
+
+// les noeuds/termes (Entries) : e;eid;'name';type;w;'formated name' 
+
+e;29671;'Salut';1;50
+e;105213;'salutation';1;206
+e;16718;'comportement';1;430
+e;101498;'personnes';1;124
+e;143881;'Correspondance';1;50
+e;68574;'correspondance';1;390
+e;170114;'acte de langage';1;50
+e;116058;'performatif';1;50
+e;36658;'interjection';1;94
+e;47647;'familier';1;184
+e;38809;'normes';1;50
+e;152488;'Culture';1;58
+e;87855;'institution';1;280
+e;14411;'Militaire';1;154
+e;146050;'militaire';1;2114
+e;220090;'salut maritime';1;50
+e;94401;'salut militaire';1;50
+e;232314;'salut hitlérien';1;2
+e;88776;'arts martiaux';1;88
+e;7366;'tatami';1;102
+e;15209;'troupe';1;214
+e;51970;'représentation';1;298
+e;13844;'théâtre';1;2860
+e;217680;'Je vous salue Marie';1;50
+e;106274;'ange Gabriel';1;50
+e;138435;'Annonciation';1;54
+e;55924;'Ave Maria';1;66
+e;146046;'salut';1;424
+e;115587;'théologie';1;112
+e;12689;'sotériologie';1;50
+e;47218;'Arménie';1;106
+e;109842;'Lombok';1;50
+e;122529;'Indonésie';1;216
+e;2298;'Morbihan';1;90
+e;76141;'au revoir';1;178
+e;214866;'Michel Sardou';1;50
+e;104974;'Togo';1;50
+e;168375;'Antigua-et-Barbuda';1;50
+e;69643;'Corée du Sud';1;68
+e;120076;'Salut les copains';1;58
+e;49422;'Gabon';1;50
+e;101328;'gabonais';1;64
+e;167660;'Bérurier Noir';1;54
+e;94030;'Comité de salut public';1;58
+e;12240;'Révolution française';1;190
+e;421346;'Salutation';1;50
+e;401497;'culturelles';1;50
+e;426640;'Social';1;50
+e;397131;'sociales';1;50
+e;404159;'Institution';1;50
+e;348325;'drapeau national';1;50
+e;130662;'paramilitaire';1;50
+e;288588;'salut romain';777;50
+e;403425;'Capitaine';1;50
+e;397444;'Bonjour';1;50
+e;298920;'Thomas Eakins';777;50
+e;254878;'_POL-NEG_PC';36;50
+e;254877;'_POL-NEUTRE_PC';36;50
+e;151553;'_FL:0';6;50
+e;3576104;'Morpho:nospace';18;50
+e;5574362;'Salut les Copains';777;0
+e;5961965;'Salut les frangins';777;0
+e;5954418;'Salut les Musclés';777;0
+e;276096;'_INFO-WIKI-YES';36;50
+e;3228593;'wiki:@';444;0
+e;5802405;'Danish Port Salut';777;0
+e;171870;'Nom:';4;50
+e;2586628;'Gender:Fem';4;0
+e;2586629;'Number:Sing';4;0
+e;157023;'Nom:Propre';18;50
+e;3857386;'Maria de la Salut';1;0
+e;223172;'_POL-NEG';36;50
+e;1813682;'îles du Salut';1;0
+e;3758377;'port Salut';1;0
+e;4907;'bonjour';1;502
+e;146881;'Nom:Fem+SG';4;50
+e;254876;'_POL-POS_PC';36;50
+e;241794;'_POL-NEUTRE';36;50
+e;196076;'armée du Salut';1;50
+e;223173;'_POL-POS';36;50
+e;2983124;'_SW';36;50
+e;239128;'_COM';36;50
+e;213534;'père spirituel';1;4
+e;198744;'direction spirituelle';1;50
+e;37721;'péché';1;268
+e;114792;'peccamineux';1;50
+e;207430;'salut fasciste';1;50
+e;274973;'salut nazi';1;50
+e;275163;'chômeurs';1;50
+e;102452;'spiritualité';1;84
+e;98349;'spirituelle';1;54
+e;21011;'Jésus-Christ';1;76
+e;275793;'le christ';777;50
+e;145275;'Christ';1;194
+e;121901;'damnation';1;64
+e;3241;'sahib';1;50
+e;277032;'sahiba';777;50
+e;277845;'vie après la mort';777;50
+e;4632;'outre-tombe';1;50
+e;7181;'Pentecôte';1;142
+e;7533;'Martin Luther';1;50
+e;16786;'souffrance';1;462
+e;122852;'douleur';1;2448
+e;8915;'euthanasie';1;104
+e;20717;'excommunication';1;58
+e;280982;'sacrement de mariage';777;50
+e;207370;'sacrement du mariage';1;50
+e;25313;'évangélisme';1;50
+e;282112;'protestantisme évangélique';777;50
+e;282113;'christianisme évangélique';777;50
+e;282114;'une relation individuelle avec';777;50
+e;282115;'crucicentrisme';777;50
+e;283577;'association internationale pour la conscience de Krishna';777;50
+e;283578;'iskcon';777;50
+e;201703;'hare Krishna';1;50
+e;242740;'chômage partiel';1;76
+e;52844;'peccavi';1;50
+e;285312;'pouvoir spirituel';777;50
+e;285313;'pouvoir temporel';777;50
+e;53179;'temporel';1;80
+e;287073;'Détresse psychologique';777;50
+e;288590;'navire salue';777;50
+e;73216;'armée du salut';1;50
+e;103458;'Thomas Münzer';1;50
+e;81679;'Müntzer';1;50
+e;10099;'Muncerus';1;50
+e;105399;'jansénisme';1;60
+e;116871;'Genshin';1;50
+e;141711;'Apocalypse';1;58
+e;290209;'apocalypse de jean';777;50
+e;290210;'Livre de la révélation';777;50
+e;290211;'Révélation de Jésus-Christ';777;50
+e;70533;'luthéranisme';1;50
+e;290592;'luthérianisme';777;50
+e;222492;'salut de l'âme';1;50
+e;141588;'Redemption';1;50
+e;97591;'pécheur';1;60
+e;17214;'chômeur';1;160
+e;145432;'demandeur d'emploi';1;62
+e;295256;'liturgie catholique';1;50
+e;71468;'calvinisme';1;56
+e;295926;'tradition réformée';777;50
+e;295927;'foi réformée';777;50
+e;295928;'théologie réformée';777;50
+e;35788;'calviniste';1;50
+e;143789;'Rédemption';1;50
+e;47317;'luthérien';1;50
+e;50120;'gnosticisme';1;50
+e;59712;'Münzer';1;50
+e;63086;'Très-Haut';1;50
+e;72305;'Joseph Priestley';1;50
+e;72926;'janséniste';1;58
+e;75888;'divin';1;226
+e;77124;'excommunié';1;56
+e;299135;'excommuni';777;50
+e;85421;'John Wesley';1;50
+e;112557;'Genk';1;50
+e;86887;'Honen';1;50
+e;89272;'aggiornamento';1;50
+e;301788;'Judas Iscariote';777;50
+e;109405;'Iscariote';1;50
+e;116652;'gnostique';1;72
+e;119590;'spiritualisation';1;50
+e;121547;'semi-pélagianisme';1;50
+e;158403;'essais';1;72
+e;158582;'lundi de Pentecôte';1;80
+e;158581;'dimanche de Pentecôte';1;56
+e;177561;'salut éternel';1;50
+e;159723;'chomage';1;58
+e;197130;'bras séculier';1;50
+e;203117;'liturgie romaine';1;50
+e;210627;'demande d'emploi';1;56
+e;206908;'rémission des péchés';1;50
+e;221636;'Jésus Christ';1;62
+e;182648;'grâce efficace';1;50
+e;189297;'John Henry Newman';1;50
+e;201499;'grâce irrésistible';1;50
+e;211133;'L'Éternel';1;50
+e;77959;'Michel';1;62
+e;310493;'Mîkhâ'êl';777;50
+e;310494;'Mîkâ'îl';777;50
+e;310495;'Mîkâl';777;50
+e;229665;'Archange saint Michel';1;50
+e;310672;'vigile pascale';777;50
+e;226743;'veillée pascale';1;50
+e;246590;'Retiens la nuit';1;50
+e;253984;'chomdu';1;8
+e;313816;'pouvoir religieux';1;50
+e;124613;'Clovis';1;50
+e;319759;'croix de Saint-Antoine';777;50
+e;319760;'croix en';777;50
+e;319758;'croix en tau';1;50
+e;311158;'La Vague';777;50
+e;145686;'Dieu';1;598
+e;202818;'Le Très-Haut';1;50
+e;140106;'El';1;52
+e;137611;'Jéhovah';1;52
+e;101930;'Élohim';1;50
+e;146250;'Yahvé';1;54
+e;177533;'Notre Père';1;32
+e;4609;'Allah';1;66
+e;195731;'Adonaï';1;50
+e;143555;'allah';1;52
+e;60446;'Barcelone';1;174
+e;337702;'autorité spirituelle';1;50
+e;339309;'blessure morale';1;50
+e;116234;'Chanteur de jazz';1;50
+e;19975;'Sardou';1;52
+e;14158;'directeur de conscience';1;50
+e;566757;'accompagnateur spirituel';777;50
+e;347554;'directeur spirituel';1;50
+e;347985;'doctrine chrétienne';1;50
+e;114568;'christianisme';1;238
+e;352608;'euthanasie active';1;50
+e;366650;'nourriture spirituelle';1;50
+e;373994;'protestantisme libéral';1;50
+e;380501;'souffrance psychique';1;50
+e;381020;'spiritualité chrétienne';1;50
+e;398721;'chrétiennes';1;50
+e;404859;'Sahib';1;50
+e;213009;'chrétiens';1;54
+e;96932;'yahvé';1;52
+e;108992;'yahveh';1;52
+e;273214;'Yahweh';777;4
+e;18252;'yhwh';1;52
+e;210091;'YHWH';1;56
+e;412117;'péchés';1;50
+e;428038;'Salvation';1;50
+e;436200;'pas facile';1;50
+e;429725;'Péché';1;50
+e;572597;'Ben Sira';777;50
+e;431286;'Sirach';1;50
+e;6134;'judaïsant';1;50
+e;574789;'Thomas Müntzer';777;50
+e;167582;'Paul de Tarse';1;54
+e;142190;'Saul';1;50
+e;579546;'Jésus en tant que Christ';777;0
+e;138783;'jésus-christ';1;50
+e;582049;'The Salvation Army';777;0
+e;275144;'chrétienne';1;18
+e;232057;'chômage technique';1;4
+e;145325;'Avent';1;50
+e;270865;'religion chrétienne';1;50
+e;26055;'Aristote';1;96
+e;272468;'Stagirite';777;50
+e;1009974;'élection inconditionnelle';777;0
+e;278466;'double prédestination';777;50
+e;71380;'chômage';1;556
+e;352609;'euthanasie passive';1;50
+e;45267;'molinisme';1;50
+e;146256;'Louis';1;70
+e;94757;'Saint Louis';1;62
+e;1175468;'saint Louis de France';777;0
+e;218590;'Louis IX de France';1;50
+e;231133;'rampokan macan';1;2
+e;169470;'arche de Noé';1;66
+e;224658;'Arche de Noé';1;6
+e;52810;'Les Provinciales';1;50
+e;643468;'Lettres écrites par Louis de Montalte à un provincial de ses amis et aux RR. PP. Jésuites sur le sujet de la morale et de la politique de ces Pères';777;0
+e;1383127;'Shaoul';777;0
+e;342854;'chanteur de jazz';1;50
+e;383586;'théologie chrétienne';1;50
+e;12161;'judas';1;66
+e;1655260;'heil';777;0
+e;135117;'vanité';1;236
+e;73859;'vanités';1;50
+e;258550;'châtiment divin';1;2
+e;1858982;'cinq points du calvinisme';777;0
+e;1846886;'TULIP';1;0
+e;365000;'morale chrétienne';1;50
+e;2326108;'appareil locomoteur humain';1;0
+e;2330457;'bonjourien';777;0
+e;2330458;'bonjourienne';777;0
+e;191225;'rebonjour';1;50
+e;2330459;'bonjourer';777;0
+e;161860;'poignée de mains';1;76
+e;45781;'salamalec';1;54
+e;264288;'signe de Babinski';1;52
+e;594059;'bloc de branche gauche';1;0
+e;2373983;'sotériologique';1;0
+e;2383839;'Hare Krishna';1;0
+e;2424816;'antinomisme';1;0
+e;2476950;'Apocalypse de Jean';1;0
+e;2481653;'salvation';1;0
+e;2513866;'Gonneville-sur-Honfleur';1;0
+e;2524943;'antinomianisme';1;0
+e;2929103;'En pièces détachées';777;0
+e;72960;'Luther';1;84
+e;3182916;'Armée du salut';777;0
+e;58452;'Paracelse';1;62
+e;272774;'Philippus Theophrastus Aureolus Bombastus von Hohenheim';777;50
+e;3183147;'le tournant de la médecine galéniste vers la médecine moderne';777;0
+e;136472;'pauvreté';1;784
+e;3337281;'Livre de la Révélation';777;0
+e;3734838;'Antinomisme';777;0
+e;4337382;'Épître aux Hébreux';1;4
+e;86923;'Théodore de Bèze';1;50
+e;106388;'purgatoire';1;62
+e;5518756;'Salvatore Cutugno';777;0
+e;5518757;'Toto Cutugno';777;0
+e;5559071;'La Maladie d'amour';777;0
+e;5917516;'François Mauriceau';777;0
+e;5932984;'dévotions catholiques';777;0
+e;5939827;'rampog macan';777;0
+e;5974351;'affaire Hallyday-Delajoux';777;0
+e;6066369;'Thomas Cranmer';777;0
+e;56095;'comment';1;88
+e;140356;'Église';1;72
+e;8873773;'souverains et aux pouvoirs civils';777;0
+
+// les types de relations (Relation Types) : rt;rtid;'trname';'trgpname';'rthelp' 
+
+rt;0;'r_associated';'idée associée';Il est demandé d'énumérer les termes les plus étroitement associés au mot cible... Ce mot vous fait penser à quoi ?
+rt;4;'r_pos';'POS';Partie du discours (Nom, Verbe, Adjectif, Adverbe, etc.)
+rt;11;'r_locution';'locution';A partir d'un terme, il est demandé d'énumérer les locutions, expression ou mots composés en rapport avec ce terme. Par exemple, pour 'moulin', ou pourra avoir 'moulin à vent', 'moulin à eau', 'moulin à café'. Pour 'vendre', on pourra avoir 'vendre la peau de l'ours avant de l'avoir tué', 'vendre à perte', etc..
+rt;12;'r_flpot';' 	r_flpot';(relation interne) potentiel de relation
+rt;18;'r_data';'r_data';Informations diverses (plutôt d'ordre lexicales)
+rt;19;'r_lemma';'r_lemma';Le lemme (par exemple 'mangent a pour lemme  'manger' ; 'avions' a pour lemme 'avion' ou 'avoir').
+rt;36;'r_infopot';'information potentielle';Information sémantique potentielle
+rt;444;'r_link';'r_link';Lien vers une ressource externe (WordNet, RadLex, UMLS, Wikipedia, etc...)
+rt;555;'r_cooccurrence';'r_cooccurrence';
+rt;777;'r_wiki';'r_wiki';Associations issues de wikipedia...
+
+// les relations sortantes : r;rid;node1;node2;type;w 
+
+r;3875637;29671;105213;777;10
+r;3875639;29671;16718;777;10
+r;3875640;29671;101498;777;10
+r;3875641;29671;143881;777;10
+r;3875642;29671;68574;777;10
+r;3875644;29671;170114;777;10
+r;3875646;29671;116058;777;10
+r;3875647;29671;36658;777;10
+r;3875649;29671;47647;777;10
+r;3875653;29671;38809;777;10
+r;3875655;29671;152488;777;10
+r;3875658;29671;87855;777;10
+r;3875660;29671;14411;777;10
+r;3875661;29671;146050;777;10
+r;3875662;29671;220090;777;10
+r;3875663;29671;94401;777;10
+r;3875664;29671;232314;777;10
+r;3875665;29671;88776;777;10
+r;3875666;29671;7366;777;10
+r;3875668;29671;15209;777;10
+r;3875670;29671;51970;777;10
+r;3875672;29671;13844;777;10
+r;3875674;29671;217680;777;10
+r;3875676;29671;106274;777;10
+r;3875677;29671;138435;777;10
+r;3875680;29671;55924;777;10
+r;3875683;29671;146046;777;10
+r;3875685;29671;115587;777;10
+r;3875687;29671;12689;777;10
+r;3875691;29671;47218;777;10
+r;3875693;29671;109842;777;10
+r;3875695;29671;122529;777;10
+r;3875698;29671;2298;777;10
+r;3875700;29671;76141;777;10
+r;3875701;29671;214866;777;10
+r;3875704;29671;104974;777;10
+r;3875707;29671;168375;777;10
+r;3875710;29671;69643;777;10
+r;3875712;29671;120076;777;10
+r;3875714;29671;49422;777;10
+r;3875716;29671;101328;777;10
+r;3875717;29671;167660;777;10
+r;3875720;29671;94030;777;10
+r;3875722;29671;12240;777;10
+r;17856826;29671;421346;777;10
+r;17856828;29671;401497;777;10
+r;17856829;29671;426640;777;10
+r;17856830;29671;397131;777;10
+r;17856831;29671;404159;777;10
+r;17856832;29671;348325;777;10
+r;17856833;29671;130662;777;10
+r;17856834;29671;288588;777;10
+r;17856835;29671;403425;777;10
+r;17856836;29671;397444;777;10
+r;17856837;29671;298920;777;10
+r;27400440;29671;254878;36;12
+r;27400439;29671;254877;36;19
+r;380189;29671;151553;12;22
+r;90915632;29671;3576104;18;26
+r;14480095;29671;146046;0;29
+r;110609720;29671;5574362;11;30
+r;116573362;29671;5961965;11;34
+r;116584561;29671;5954418;11;34
+r;78458420;29671;276096;36;35
+r;78098758;29671;3228593;444;35
+r;113307456;29671;5802405;11;37
+r;1480091;29671;171870;4;38
+r;54046995;29671;2586628;4;45
+r;54079136;29671;2586629;4;45
+r;32556245;29671;157023;18;52
+r;32533257;29671;29671;19;54
+r;95175513;29671;3857386;11;55
+r;26470533;29671;223172;36;59
+r;29604159;29671;1813682;11;59
+r;93657399;29671;3758377;11;59
+r;380190;29671;4907;0;60
+r;32556246;29671;146881;4;60
+r;27400438;29671;254876;36;69
+r;26143902;29671;241794;36;90
+r;8611407;29671;120076;11;162
+r;8660869;29671;196076;11;164
+r;17856825;29671;223173;36;331
+r;73979746;29671;2983124;555;6799
+r;24029083;29671;239128;0;1000000
+
+// les relations entrantes : r;rid;node1;node2;type;w 
+
+r;3270361;213534;29671;777;10
+r;3270362;198744;29671;777;10
+r;3670827;37721;29671;777;10
+r;3670829;114792;29671;777;10
+r;3875540;207430;29671;777;10
+r;3875544;232314;29671;777;10
+r;3875542;274973;29671;777;9
+r;3898913;275163;29671;777;10
+r;3969684;102452;29671;777;10
+r;3969687;98349;29671;777;10
+r;3986491;21011;29671;777;10
+r;3986496;275793;29671;777;10
+r;3986508;145275;29671;777;10
+r;4051115;121901;29671;777;10
+r;4138329;3241;29671;777;10
+r;4138330;277032;29671;777;10
+r;4206221;277845;29671;777;10
+r;4206223;4632;29671;777;10
+r;4265442;7181;29671;777;10
+r;4274964;7533;29671;777;10
+r;4324816;16786;29671;777;10
+r;4324832;122852;29671;777;10
+r;4332502;8915;29671;777;10
+r;4457436;20717;29671;777;10
+r;4597864;280982;29671;777;10
+r;4597866;207370;29671;777;10
+r;4740517;25313;29671;777;10
+r;4740518;282112;29671;777;10
+r;4740519;282113;29671;777;10
+r;4740520;282114;29671;777;10
+r;4740521;282115;29671;777;10
+r;4923619;283577;29671;777;10
+r;4923621;283578;29671;777;10
+r;4923623;201703;29671;777;10
+r;4961864;242740;29671;777;10
+r;5160829;52844;29671;777;10
+r;5166494;285312;29671;777;10
+r;5166496;285313;29671;777;10
+r;5166498;53179;29671;777;10
+r;5602153;287073;29671;777;10
+r;6097765;94401;29671;777;10
+r;6098170;220090;29671;777;10
+r;6098172;288590;29671;777;10
+r;6152388;73216;29671;777;10
+r;6152389;196076;29671;777;10
+r;6158599;103458;29671;777;10
+r;6158601;81679;29671;777;10
+r;6158603;10099;29671;777;10
+r;6263017;105399;29671;777;10
+r;6294836;116871;29671;777;10
+r;6296996;141711;29671;777;10
+r;6296998;290209;29671;777;10
+r;6297000;290210;29671;777;10
+r;6297002;290211;29671;777;10
+r;6337051;70533;29671;777;10
+r;6337056;290592;29671;777;10
+r;6338729;222492;29671;777;10
+r;6355382;141588;29671;777;10
+r;6620656;97591;29671;777;10
+r;6698130;17214;29671;777;10
+r;6728314;145432;29671;777;10
+r;6797781;295256;29671;777;10
+r;6864107;71468;29671;777;10
+r;6864116;295926;29671;777;10
+r;6864119;295927;29671;777;10
+r;6864122;295928;29671;777;10
+r;6864126;35788;29671;777;10
+r;6883778;143789;29671;777;10
+r;6950595;47317;29671;777;10
+r;6978368;50120;29671;777;10
+r;7036815;59712;29671;777;10
+r;7065400;63086;29671;777;10
+r;7149539;72305;29671;777;10
+r;7156282;72926;29671;777;10
+r;7181720;75888;29671;777;10
+r;7193701;77124;29671;777;10
+r;7193703;299135;29671;777;10
+r;7266474;85421;29671;777;10
+r;7278838;112557;29671;777;10
+r;7278840;86887;29671;777;10
+r;7303507;89272;29671;777;10
+r;7435300;105213;29671;777;10
+r;7470575;301788;29671;777;10
+r;7470578;109405;29671;777;10
+r;7553381;116652;29671;777;10
+r;7589556;119590;29671;777;10
+r;7615244;121547;29671;777;10
+r;7846613;158403;29671;777;10
+r;7847603;158582;29671;777;10
+r;7852000;158581;29671;777;10
+r;7918438;177561;29671;777;10
+r;7985198;159723;29671;777;10
+r;8029213;197130;29671;777;10
+r;8066094;203117;29671;777;10
+r;8078782;210627;29671;777;10
+r;8079266;206908;29671;777;10
+r;8109522;221636;29671;777;10
+r;8122112;182648;29671;777;10
+r;8179846;189297;29671;777;10
+r;8257997;201499;29671;777;10
+r;8291214;211133;29671;777;10
+r;8363958;77959;29671;777;10
+r;8363960;310493;29671;777;10
+r;8363961;310494;29671;777;10
+r;8363962;310495;29671;777;10
+r;8363963;229665;29671;777;10
+r;8383251;310672;29671;777;10
+r;8383252;226743;29671;777;10
+r;8424027;246590;29671;777;10
+r;8509465;253984;29671;777;10
+r;8812120;313816;29671;777;10
+r;9009633;124613;29671;777;10
+r;9035905;319759;29671;777;10
+r;9035907;319760;29671;777;10
+r;9035909;319758;29671;777;10
+r;9473863;196076;29671;0;147
+r;9416882;120076;29671;0;144
+r;13233799;311158;29671;777;10
+r;3375506;145686;29671;777;1
+r;7065401;202818;29671;777;1
+r;7065402;140106;29671;777;1
+r;7065403;137611;29671;777;1
+r;7065404;101930;29671;777;1
+r;7065405;146250;29671;777;1
+r;7065406;177533;29671;777;1
+r;7065407;4609;29671;777;1
+r;7065408;195731;29671;777;1
+r;11757409;143555;29671;777;1
+r;6338728;146046;29671;777;9
+r;5092126;60446;29671;777;6
+r;16928818;337702;29671;777;10
+r;16938362;339309;29671;777;10
+r;16955685;116234;29671;777;10
+r;16955688;19975;29671;777;10
+r;16979214;14158;29671;777;10
+r;16979213;566757;29671;777;10
+r;16979212;347554;29671;777;10
+r;16981758;347985;29671;777;10
+r;16981756;114568;29671;777;10
+r;17000176;352608;29671;777;10
+r;17090396;366650;29671;777;10
+r;17130219;373994;29671;777;10
+r;17165141;380501;29671;777;10
+r;17166923;381020;29671;777;10
+r;17247262;397444;29671;777;10
+r;17263909;398721;29671;777;10
+r;17327445;404859;29671;777;10
+r;17380420;213009;29671;777;10
+r;17404342;96932;29671;777;10
+r;17404343;108992;29671;777;10
+r;17404344;273214;29671;777;10
+r;17404345;18252;29671;777;10
+r;17404346;210091;29671;777;10
+r;17423304;412117;29671;777;10
+r;17531440;421346;29671;777;10
+r;17601968;428038;29671;777;10
+r;17607286;436200;29671;777;10
+r;17621480;429725;29671;777;10
+r;17636054;572597;29671;777;10
+r;17636055;431286;29671;777;10
+r;17780420;6134;29671;777;10
+r;17800528;574789;29671;777;10
+r;17871989;167582;29671;777;10
+r;17871991;142190;29671;777;10
+r;18052582;579546;29671;777;10
+r;18052584;138783;29671;777;10
+r;18224043;582049;29671;777;10
+r;18610309;275144;29671;777;10
+r;18815886;232057;29671;777;10
+r;19105378;145325;29671;777;10
+r;20914728;270865;29671;777;10
+r;20931898;26055;29671;777;10
+r;20931900;272468;29671;777;10
+r;20988968;1009974;29671;777;10
+r;20988970;278466;29671;777;10
+r;3898905;71380;29671;777;9
+r;21515100;352609;29671;777;10
+r;22131938;45267;29671;777;10
+r;22151389;146256;29671;777;10
+r;22151390;94757;29671;777;10
+r;22151391;1175468;29671;777;10
+r;22151392;218590;29671;777;10
+r;22520710;231133;29671;777;10
+r;22569560;169470;29671;777;10
+r;22569562;224658;29671;777;10
+r;25295517;52810;29671;777;10
+r;25295519;643468;29671;777;10
+r;28098027;1383127;29671;777;10
+r;28204538;342854;29671;777;10
+r;28774839;383586;29671;777;10
+r;28912740;12161;29671;777;10
+r;28998711;1655260;29671;777;10
+r;29129859;135117;29671;777;10
+r;29129860;73859;29671;777;10
+r;2441101;258550;29671;0;26
+r;30091546;1858982;29671;777;10
+r;30091547;1846886;29671;777;10
+r;33763534;365000;29671;777;10
+r;33909364;2326108;29671;777;10
+r;33996928;2330457;29671;777;10
+r;33996929;2330458;29671;777;10
+r;33996930;191225;29671;777;10
+r;33996931;2330459;29671;777;10
+r;33996932;161860;29671;777;10
+r;33996933;45781;29671;777;10
+r;52033760;264288;29671;777;10
+r;52033761;594059;29671;777;10
+r;52195391;2373983;29671;777;10
+r;52964981;2383839;29671;777;10
+r;54548137;2424816;29671;777;10
+r;58011656;2476950;29671;777;10
+r;60364491;2481653;29671;777;10
+r;71059735;2513866;29671;777;10
+r;71499535;2524943;29671;777;10
+r;71840841;2929103;29671;777;10
+r;75438913;72960;29671;777;10
+r;76640025;288588;29671;777;10
+r;76975426;3182916;29671;777;10
+r;76979425;58452;29671;777;10
+r;76979427;272774;29671;777;10
+r;76979429;3183147;29671;777;10
+r;82801711;136472;29671;777;10
+r;84297230;3337281;29671;777;10
+r;93194805;3734838;29671;777;10
+r;14480094;146046;29671;0;31
+r;93657400;3758377;29671;0;60
+r;95175514;3857386;29671;0;55
+r;98965286;4337382;29671;777;10
+r;103338444;86923;29671;777;10
+r;29604160;1813682;29671;0;42
+r;108068722;106388;29671;777;10
+r;108786965;5518756;29671;777;10
+r;108786966;5518757;29671;777;10
+r;109904744;5559071;29671;777;10
+r;110609721;5574362;29671;0;6
+r;115470682;5917516;29671;777;10
+r;115829736;5932984;29671;777;10
+r;113307457;5802405;29671;0;5
+r;115940429;5939827;29671;777;10
+r;116810100;5974351;29671;777;10
+r;118920009;6066369;29671;777;10
+r;116573363;5961965;29671;0;10
+r;116584562;5954418;29671;0;10
+r;190785632;56095;29671;777;10
+r;190785634;140356;29671;777;10
+r;190785636;8873773;29671;777;10
+r;32533257;29671;29671;19;54
+
+// END
+</CODE>
+
+
+</div>
+</div>
+</body>
+</html>

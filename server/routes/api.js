@@ -12,21 +12,37 @@ router.get('/:terme', function(req, res, next){
   
   // Pb -> lire et ecrire en meme temps
   fs.readFile('server/cache/dumps/' + req.params.terme + '.txt', 'utf8', function (err,data) {
+    
+    // Erreur Lecture fichier
     if (err) {
-      // Fichier n'existe pas en cache
+     
+      // Erreur lecture: Fichier n'existe pas en cache
       if(err.code === 'ENOENT'){
 
+        request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=", 
+          function(error, response, body) {
+            obj.push({"_id": "sfff" ,"text": body, "isCompleted":false}) ;            
+            res.json(obj);
+
+            // Ecrire fichier dans cache
+            fs.writeFile("server/cache/dumps/" + req.params.terme + ".txt", data, function(err){
+              // Erreur lors de l'ecriture du fichier
+              if(err){
+                return console.log(err);
+              }
+            });
+          }
+        );
       } else {
+        // Autre erreur lecture fichier
         return console.log(err);        
       }
+    } else  {
+      // Fichier Existe
+      obj.push({"_id": "sfff" ,"text": data, "isCompleted":false}) ;
+      res.json(obj);
     }
-    obj.push({"_id": "sfff" ,"text": data, "isCompleted":false}) ;
-    res.json(obj);
   });
-
-  // -->Pb: lire et ecrire fichier en meme temps, -->auto close: pense à écrire fichier et créer json en mm temps
-  request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=").
-                  pipe(fs.createWriteStream("server/cache/dumps/" + req.params.terme + ".txt"));
 });
   
 module.exports = router;

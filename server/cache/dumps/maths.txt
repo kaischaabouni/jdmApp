@@ -119,7 +119,7 @@ padding: 0px; margin: 0px; border: 0px;">
 	Numéro de relation
 	<input id="rel" type="text" name="rel" value="" size=10></form>
 <br>
-<br>FROM CACHE : size=20543 - date=October 07 2017 18:28:58. - 101 secondes ago - 0.0011689814814815 days ago <br>
+<br>FROM CACHE : size=20543 - date=October 07 2017 18:28:58. - 75683 secondes ago - 0.87596064814815 days ago <br>
 
 <br>
 
