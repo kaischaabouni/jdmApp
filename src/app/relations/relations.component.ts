@@ -24,7 +24,9 @@ export class RelationsComponent implements OnInit {
   rechercherTerme($event, termeRecherche){
     if($event.which === 1){
       this._relationService.getRelations(termeRecherche.value)
-      .subscribe(resRelationData => this.relations = resRelationData);
+      .subscribe(resRelationData =>    { 
+        //console.log(resRelationData);
+        this.relations = resRelationData.rt11.sortantes; });
     };
   }
 }

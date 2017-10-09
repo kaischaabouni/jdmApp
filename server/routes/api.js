@@ -8,9 +8,7 @@ var request = require("request");
 
 // chercher un mot
 router.get('/:terme', function(req, res, next){
-  var obj = [{"_id":req.params.terme,"text":req.params.terme,"isCompleted":false},{"_id":"59d28b71734d1d42e49ebc64","isCompleted":true,"text":"go to work"},{"_id":"59d28bba734d1d42e49ebc8a","text":"go food shopping","isCompleted":false},{"_id":"59d38b766cface1b98541960","text":"Machin","isCompleted":false}];
   
-  // Pb -> lire et ecrire en meme temps
   fs.readFile('server/cache/dumps/' + req.params.terme + '.txt', 'utf8', function (err,data) {
     
     // Erreur Lecture fichier
@@ -21,8 +19,8 @@ router.get('/:terme', function(req, res, next){
 
         request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=", 
           function(error, response, body) {
-            obj.push({"_id": "sfff" ,"text": body, "isCompleted":false}) ;            
-            res.json(obj);
+            //obj.push({"_id": "sfff" ,"text": body, "isCompleted":false}) ;            
+            //res.json(obj);
 
             // Ecrire fichier dans cache
             fs.writeFile("server/cache/dumps/" + req.params.terme + ".txt", data, function(err){
@@ -39,8 +37,12 @@ router.get('/:terme', function(req, res, next){
       }
     } else  {
       // Fichier Existe
-      obj.push({"_id": "sfff" ,"text": data, "isCompleted":false}) ;
-      res.json(obj);
+      //obj.push({"_id": "sfff" ,"text": data, "isCompleted":false}) ;
+      var objJSONARetourner = {"eid": "73068", "terme" : "bureau", "defintions": ["de1 ha ha", "def2 hi hi"], 
+                  "rt11" : {"sortantes" : ["chaise", "table"], "entrantes" : ["stylo", "papier"]},
+                  "rt18" :{"sortantes" : ["machin sortant", "je ne sais pas"], "entrantes" : ["juste pour tester"]}
+      };
+      res.json(objJSONARetourner);
     }
   });
 });

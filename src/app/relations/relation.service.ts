@@ -9,9 +9,6 @@ export class RelationService {
   constructor(private _http: Http) { }
 
   getRelations(terme){
-    //return this._http.get(this._getUrl)
-    return this._http.get(this._getUrl + terme)
-    .map((response: Response)=> response.json());
+    return this._http.get(this._getUrl + terme).map((response: Response)=> response.json());
   }
-
 }
