@@ -18,32 +18,37 @@
     </tbody>
 </table>
 
-<table *ngIf="r_associated" class="table-relations-generique tables table-bordered">
+<table *ngIf="rt0" class="table-relations-associated table table-bordered">
     <thead>
         <tr>
-            <th>Relations entrantes</th>
+            <th colspan="2">Associations d'idées</th>
+        </tr>
+        <tr>
             <th>Relations sortantes</th>
+            <th>Relations entrantes</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Rel1</td>
-            <td>Rel2</td>
+            <td>{{rt0.sortantes}}</td>
+            <td>{{rt0.entrantes}}</td>
         </tr>
     </tbody>
 </table>
-
-<table *ngIf="r_isa" class="table-relations-generique tables table-bordered">
+<table *ngIf="rt1" class="table-raffinement-semantiques table table-bordered">
     <thead>
         <tr>
-            <th>Relations entrantes</th>
+            <th colspan="2">Un raffinement sémantique</th>
+        </tr>
+        <tr>
             <th>Relations sortantes</th>
+            <th>Relations entrantes</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Rel1</td>
-            <td>Rel2</td>
+            <td>{{rt1.sortantes}}</td>
+            <td>{{rt1.entrantes}}</td>
         </tr>
     </tbody>
 </table>

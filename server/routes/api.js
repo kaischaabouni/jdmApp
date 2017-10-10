@@ -14,8 +14,14 @@ router.get('/:terme', function (req, res, next) {
         "eid": "73068", "terme": "bureau",
         "definitions": ["de1 ha ha", "def2 hi hi"],
         "relations": {
-            "rt0": { "sortantes": ["chaise", "table"], "entrantes": ["stylo", "papier"] },
-            "rt1": { "sortantes": ["machin sortant", "je ne sais pas"], "entrantes": ["juste pour tester"] }
+            "rt0": {
+                "sortantes": [{ "nom": "chaise", "poids": 45 }, { "nom": "table", "poids": 150 }],
+                "entrantes": [{ "nom": "stylo", "poids": 15 }, { "nom": "papier", "poids": -2 }]
+            },
+            "rt1": {
+                "sortantes": [{ "nom": "machin sortant", "poids": 45 }, { "nom": "je ne sais pas", "poids": 150 }],
+                "entrantes": [{ "nom": "juste pour tester", "poids": 327 }]
+            }
         }
     };
 
