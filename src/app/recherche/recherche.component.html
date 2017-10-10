@@ -4,11 +4,46 @@
         <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-primary col-md-2">Chercher</button>
     </div>
 </div>
-<div class="tables-resultat">
-    <div class="table-definitions">
-        Ici on a def: {{definition}}
-    </div>
-    <div class="table-relation1">
 
-    </div>
-</div>
+<table *ngIf="definitions" class="table-definitions table table-bordered">
+    <thead>
+        <tr>
+            <th>Définitions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let definition of definitions">
+            <td>{{definition}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table *ngIf="r_associated" class="table-relations-generique tables table-bordered">
+    <thead>
+        <tr>
+            <th>Relations entrantes</th>
+            <th>Relations sortantes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rel1</td>
+            <td>Rel2</td>
+        </tr>
+    </tbody>
+</table>
+
+<table *ngIf="r_isa" class="table-relations-generique tables table-bordered">
+    <thead>
+        <tr>
+            <th>Relations entrantes</th>
+            <th>Relations sortantes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Rel1</td>
+            <td>Rel2</td>
+        </tr>
+    </tbody>
+</table>
