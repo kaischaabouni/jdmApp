@@ -1,1 +1,1 @@
-web: node server
+web: node --debug=5858 server
