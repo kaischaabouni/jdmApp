@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 //var mongojs = require('mongojs');
 //var db= mongojs('mongodb://kais:testtest@ds159274.mlab.com:59274/todos',['todos'])
-var readline = require('readline');
+//var readline = require('readline');
 var fs = require('fs');
 var request = require("request");
 
@@ -52,6 +52,7 @@ router.get('/:terme', function (req, res, next) {
             }
         } else {
             // Fichier Existe
+            
             res.json(objJSONARetourner);
         }
     });
