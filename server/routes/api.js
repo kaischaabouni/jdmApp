@@ -9,20 +9,7 @@ var request = require("request");
 // chercher un mot
 router.get('/:terme', function (req, res, next) {
 
-    // Mock objet pour tester réponse
-    var objJSONARetourner = {
-        "eid": "73068", "terme": "bureau",
-        "relations": {
-            "rt0": {
-                "sortantes": [{ "nom": "chaise", "poids": 45 }, { "nom": "table", "poids": 150 }],
-                "entrantes": [{ "nom": "stylo", "poids": 15 }, { "nom": "papier", "poids": -2 }]
-            },
-            "rt1": {
-                "sortantes": [{ "nom": "machin sortant", "poids": 45 }, { "nom": "je ne sais pas", "poids": 150 }],
-                "entrantes": [{ "nom": "juste pour tester", "poids": 327 }]
-            }
-        }
-    };
+    objJSONARetourner = {};    
 
     // fonction parser cde Dump
     let parserCode = function(codeDump){
@@ -38,28 +25,37 @@ router.get('/:terme', function (req, res, next) {
         let longueurListeRelations = listeRelations.length - 2;
 
         // type de relations définies
-        let listeTypeRelationDefinies = 
-            ["r_domain", "r_syn", "r_isa", "r_anto", "r_hypo", "r_lieu", "r_instance", "r_wiki"];
+        let listeTypeRelationDefinies = ["3", "5", "6", "7", "8", "15", "64", "777"];
         for (let i = 2; i < longueurListeRelations; i++) {
-            let relationID = listeRelations[i].split(';')[2];
+            let typeReltaionCourant = listeRelations[i].split(';');
+            let relationID = typeReltaionCourant[1];
             relationID = relationID.substring(1, relationID.length - 1);
-            let relationName = listeRelations[i].split(';')[3];
-            relationName = relationName.substring(1, relationName.length - 1);
+            let trname = typeReltaionCourant[3];
+            trname = trname.substring(1, trname.length - 1);
             if(listeTypeRelationDefinies.indexOf(relationID) >= 0){
                 if(typeof objJSONARetourner.relations === "undefined"){
-                    objJSONARetourner.relations = [];
+                    objJSONARetourner.relations = {};
                 }
-                objJSONARetourner.relations.push({"nom" : relationName, "sortantes" : "machin", "entrantes" : "truc"});
+                objJSONARetourner.relations[relationID] = {"trname" : trname, "sortantes" : "", "entrantes" : ""};
             }
         }
 
         // parser les relations sortantes
         let startRelationsEntrantes = codeDump.indexOf("// les relations entrantes : r;rid;node1;node2;type;w");  
         let codeRelationsSortantes = codeDump.substring(startRelationsSortantes, startRelationsEntrantes);
-        
+        codeRelationsSortantes = codeRelationsSortantes.substring(codeRelationsSortantes.indexOf('\n') + 2);
+        let positionFinLigne = codeRelationsSortantes.indexOf('\n');
+        while(positionFinLigne > 0){
+            let relationCourante = codeRelationsSortantes.substring(0, positionFinLigne).split(';');
+            if(relationCourante[4] in objJSONARetourner.relations){
+                objJSONARetourner.relations[relationCourante[4]].sortantes = 
+                    objJSONARetourner.relations[relationCourante[4]].sortantes + ", " + relationCourante[3];
+            }
+            codeRelationsSortantes = codeRelationsSortantes.substring(positionFinLigne + 1);
+            positionFinLigne = codeRelationsSortantes.indexOf('\n');
+        }
     }
 
-    objJSONARetourner = {};
 
     fs.readFile('server/cache/dumps/' + req.params.terme + '.txt', 'utf8', function (err, data) {
 

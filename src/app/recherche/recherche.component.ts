@@ -12,8 +12,9 @@ import { Relation } from '../modeles/relation';
 export class RechercheComponent implements OnInit {
 
     definitions: String;
+    relationKeys : any;
     relations : any;
-
+    
     constructor(private _rechercheService: RechercheService) { }
 
     ngOnInit() {
@@ -24,8 +25,7 @@ export class RechercheComponent implements OnInit {
             this._rechercheService.getResultatRecherche(termeRecherche.value)
                 .subscribe(resRechercheData => {
                     this.definitions = resRechercheData.definitions;
-                    console.log(resRechercheData.relations);
-                    console.log("trace:::");
+                    this.relationKeys = Object.keys(resRechercheData.relations);
                     this.relations = resRechercheData.relations;
                 });
         };

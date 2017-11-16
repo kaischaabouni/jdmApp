@@ -26,9 +26,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let relation of relations">
-            <td>{{relation.sortantes}}</td>
-            <td>{{relation.entrantes}}</td>
+        <tr *ngFor="let relationID of relationKeys">
+            <td>{{relations[relationID].sortantes}}</td>
+            <td>{{relations[relationID].entrantes}}</td>
         </tr>
     </tbody>
 </table>
