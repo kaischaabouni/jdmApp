@@ -12,43 +12,24 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let definition of definitions">
-            <td>{{definition}}</td>
+        <tr>
+            <td [innerHTML]="definitions"></td>
         </tr>
     </tbody>
 </table>
 
-<table *ngIf="rt0" class="table-relations-associated table table-bordered">
+<table *ngIf="relations" class="table-relations table table-bordered">
     <thead>
-        <tr>
-            <th colspan="2">Associations d'idées</th>
-        </tr>
         <tr>
             <th>Relations sortantes</th>
             <th>Relations entrantes</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{rt0.sortantes}}</td>
-            <td>{{rt0.entrantes}}</td>
+        <tr *ngFor="let relation of relations">
+            <td>{{relation.sortantes}}</td>
+            <td>{{relation.entrantes}}</td>
         </tr>
     </tbody>
 </table>
-<table *ngIf="rt1" class="table-raffinement-semantiques table table-bordered">
-    <thead>
-        <tr>
-            <th colspan="2">Un raffinement sémantique</th>
-        </tr>
-        <tr>
-            <th>Relations sortantes</th>
-            <th>Relations entrantes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{rt1.sortantes}}</td>
-            <td>{{rt1.entrantes}}</td>
-        </tr>
-    </tbody>
-</table>
+

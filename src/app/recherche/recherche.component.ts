@@ -11,9 +11,8 @@ import { Relation } from '../modeles/relation';
 
 export class RechercheComponent implements OnInit {
 
-    definitions: String[];
-    rt0 = {sortantes : "", entrantes: ""};
-    rt1 = {sortantes : "", entrantes: ""};
+    definitions: String;
+    relations : any;
 
     constructor(private _rechercheService: RechercheService) { }
 
@@ -25,22 +24,9 @@ export class RechercheComponent implements OnInit {
             this._rechercheService.getResultatRecherche(termeRecherche.value)
                 .subscribe(resRechercheData => {
                     this.definitions = resRechercheData.definitions;
-
-                    // rt0
-                    for(let association of resRechercheData.relations.rt0.sortantes){
-                        this.rt0.sortantes = this.rt0.sortantes + association.nom + "; ";
-                    }
-                    for(let association of resRechercheData.relations.rt0.entrantes){
-                        this.rt0.entrantes = this.rt0.entrantes + association.nom + "; ";
-                    }
-
-                    // rt1
-                    for(let association of resRechercheData.relations.rt1.sortantes){
-                        this.rt1.sortantes = this.rt0.sortantes + association.nom + "; ";
-                    }
-                    for(let association of resRechercheData.relations.rt1.entrantes){
-                        this.rt1.entrantes = this.rt0.entrantes + association.nom + "; ";
-                    }
+                    console.log(resRechercheData.relations);
+                    console.log("trace:::");
+                    this.relations = resRechercheData.relations;
                 });
         };
     }
