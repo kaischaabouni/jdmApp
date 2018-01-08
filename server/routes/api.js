@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var parser = require('../utils/parser');
+var writer = require('../utils/writer');
 
 const utf8 = require('utf8');
+var schedule = require('node-schedule');
 
 //var mongojs = require('mongojs');
 //var db= mongojs('mongodb://kais:testtest@ds159274.mlab.com:59274/todos',['todos'])
@@ -32,7 +34,7 @@ router.get('/:terme', function (req, res, next) {
                         } else {
 
                             // Connexion réussite
-                            var code = body.substring(body.indexOf("<CODE>"));
+                            let code = body.substring(body.indexOf("<CODE>"));
 
                             // Parser Code
                             parser.parserCode(code);
@@ -41,22 +43,7 @@ router.get('/:terme', function (req, res, next) {
                             res.json(objJSONARetourner);
 
                             // Ecrire fichier dans cache
-                            fs.writeFile("server/cache/dumps/" + req.params.terme + ".json", JSON.stringify(objJSONARetourner), 'utf8', function (err) {
-                                // Erreur lors de l'ecriture du fichier
-                                if (err) {
-                                    return console.log(err);
-                                }
-                            });
-
-                            // Date de validité (7 jours)
-                            let validityDate = new Date();
-                            validityDate.setDate(validityDate.getDate() + 7);
-                            fs.writeFile("server/cache/validity/" + req.params.terme + ".txt", validityDate.getTime(), function (err) {
-                                // Erreur lors de l'ecriture du fichier
-                                if (err) {
-                                    return console.log(err);
-                                }
-                            });
+                            writer.writeFile(req.params.terme, objJSONARetourner);
                         }
                     }
                 );
@@ -67,9 +54,32 @@ router.get('/:terme', function (req, res, next) {
         } else {
 
             // Fichier Existe
-            if(Date.now() > data){
-                console.log("oui");
+
+            let date = new Date();
+            if (date > data) {
+
+                // schedule job à 3:00 du jour suivant
+                date.setHours(3);
+                date.setTime(date.getTime() + 24 * 60 * 60 * 1000);
+                schedule.scheduleJob(date, function () {
+                    request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=",
+                        function (error, response, body) {
+
+                            if (error) {
+                                // erreur de connexion
+
+                            } else {
+
+                                // Connexion réussite
+                                let code = body.substring(body.indexOf("<CODE>"));
+                                parser.parserCode(code);
+                                writer.writeFile(req.params.terme, objJSONARetourner);
+                            }
+                        }
+                    );
+                });
             }
+
             fs.readFile('server/cache/dumps/' + req.params.terme + '.json', 'utf8', function (err, data) {
                 if (err) {
                     return console.log(err);
