@@ -1,55 +1,52 @@
 <!-- Section Recherche -->
-<section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                <div class="barre-recherche text-center">
-                    <div class="form-group">
-                        <input class="input-lg col-md-10" placeholder="Taper un mot" autofocus #termeRecherche>
-                        <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-primary col-md-2">Chercher</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="row" *ngIf="definitions">
-            <div class="table-definitions">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Définitions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td [innerHTML]="definitions"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="row" *ngIf="relations">
-            <div class="table-relations">
-                <table class="table table-bordered" *ngFor="let relationID of relationKeys">
-                    <thead>
-                        <tr>
-                            <th colspan="2"> {{relations[relationID].trname}}</th>
-                        </tr>
-                        <tr>
-                            <th>Relations sortantes</th>
-                            <th>Relations entrantes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> {{relations[relationID].sortantes}}</td>
-                            <td>{{relations[relationID].entrantes}}</td>
-                        </tr>
-                    </tbody>
-                </table>
+<div class="row">
+    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+        <div class="barre-recherche text-center">
+            <div class="form-group">
+                <input class="col-12 col-md-9 mb-2 mb-md-0" placeholder="Taper un mot" autofocus #termeRecherche>
+                <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-block btn-lg btn-primary">Chercher</button>
             </div>
         </div>
     </div>
-</section>
+</div>
+
+
+<div class="row" *ngIf="definitions">
+    <div class="table-definitions">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Définitions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [innerHTML]="definitions"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row" *ngIf="relations">
+    <div class="table-relations">
+        <table class="table table-bordered" *ngFor="let relationID of relationKeys">
+            <thead>
+                <tr>
+                    <th colspan="2"> {{relations[relationID].trname}}</th>
+                </tr>
+                <tr>
+                    <th>Relations sortantes</th>
+                    <th>Relations entrantes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> {{relations[relationID].sortantes}}</td>
+                    <td>{{relations[relationID].entrantes}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
