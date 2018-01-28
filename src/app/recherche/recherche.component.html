@@ -1,11 +1,11 @@
 <!-- Section Recherche -->
 
 <div class="row">
-    <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+    <div class="col-md-10 col-lg-8 col-xl-7 col-sm-12 col-xs-12 mx-auto">
         <div class="barre-recherche text-center">
             <div class="form-group">
-                <input class="col-12 col-md-9 mb-2 mb-md-0" placeholder="Taper un mot" autofocus #termeRecherche>
-                <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-block btn-lg btn-primary">Chercher</button>
+                <input class="input input-lg col-md-10 col-sm-12 col-xs-12 " placeholder="Rechercher un mot" autofocus #termeRecherche>
+                <button (click)="rechercherTerme($event, termeRecherche)" class="btn btn-lg btn-primary col-md-2 col-sm-12 col-xs-12">Rechercher</button>
             </div>
         </div>
     </div>
