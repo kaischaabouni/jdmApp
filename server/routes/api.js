@@ -25,7 +25,7 @@ router.get('/:terme', function (req, res, next) {
 
             // Erreur lecture: Fichier n'existe pas en cache
             if (err.code === 'ENOENT') {
-                request("http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=",
+                request({"url" : "http://www.jeuxdemots.org/rezo-dump.php?gotermsubmit=Chercher&gotermrel=" + req.params.terme + "&rel=", "encoding" : "latin1"},
                     function (error, response, body) {
 
                         if (error) {
@@ -34,7 +34,7 @@ router.get('/:terme', function (req, res, next) {
                         } else {
 
                             // Connexion réussite
-                            //body = utf8.encode(body);
+                            //body = utf8.decode(body);
                             let code = body.substring(body.indexOf("<CODE>"));
 
                             // Parser Code
