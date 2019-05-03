@@ -42,7 +42,8 @@
     "sshpk": ">=1.13.2",
     "macaddress": ">=0.2.9",
     "adm-zip": ">=0.4.11",
-    "lodash": ">=4.17.11"
+    "lodash": ">=4.17.11",
+    "jquery": ">=3.4.0"
   },
   "devDependencies": {
     "@angular/cli": "^7.3.8",
